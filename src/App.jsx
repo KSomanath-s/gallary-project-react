@@ -1,10 +1,11 @@
 import React from 'react'
+import Data from './components/Data'
 
 const App = () => {
   return (
     <>
-      <div className='w-full h-56 bg-blue-500 container mx-auto px-4'>
-          <h1>hello</h1>
+      <div className='h-scrren text-white container mx-auto px-4'>
+          <Data/>
       </div>
     </>
   )
