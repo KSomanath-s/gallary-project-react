@@ -4,6 +4,7 @@ const DataCard = ({ image }) => {
 
     const [loading, setLoading] = useState(true);
     const placeholderImage = "https://placehold.co/600x400";
+    
     return (
         <>
             <div className='bg-white shadow-lg text-center rounded-lg w-56 h-56 text-black p-2 mb-2'>

@@ -7,8 +7,12 @@ const Data = () => {
     const [userData, setUserData] = useState([]);
 
     const getData = async () => {
-        const response = await axios.get('https://picsum.photos/v2/list');
-        setUserData(response.data)
+        try {
+            const response = await axios.get('https://picsum.photos/v2/list');
+            setUserData(response.data)
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
@@ -20,10 +24,7 @@ const Data = () => {
                     className='bg-green-600 px-5 py-2 rounded-lg text-white'
                 >Get Data</button>
             </div>
-            {/*  */}
-
             <div className='grid grid-cols-6 gap-3 py-4'>
-
                 {
                     userData.length > 0 ? (
                         userData.map((curEle) => (
@@ -37,9 +38,7 @@ const Data = () => {
                         </>
                     )
                 }
-
             </div>
-
         </>
     )
 }
